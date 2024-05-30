@@ -38,7 +38,7 @@ export default function DemoPayOS() {
       const body = JSON.stringify({
         description: descriptionRef.current.value,
         productName: productNameRef.current.value,
-        price: Number(priceRef.current.value),
+        amount: Number(priceRef.current.value),
         returnUrl: RETURN_URL,
         cancelUrl: CANCEL_URL,
       });
@@ -80,14 +80,14 @@ export default function DemoPayOS() {
       if (checkoutResponse.checkoutUrl.startsWith("https://dev.pay.payos.vn")) {
         url = checkoutResponse.checkoutUrl.replace(
           "https://dev.pay.payos.vn",
-          "https://next.dev.pay.payos.vn"
+          "https://dev.pay.payos.vn"
         );
       }
 
       if (checkoutResponse.checkoutUrl.startsWith("https://pay.payos.vn")) {
         url = checkoutResponse.checkoutUrl.replace(
           "https://pay.payos.vn",
-          "https://next.pay.payos.vn"
+          "https://pay.payos.vn"
         );
       }
       window.location.href = url;
@@ -100,13 +100,13 @@ export default function DemoPayOS() {
       if (checkoutResponse.checkoutUrl.startsWith("https://dev.pay.payos.vn")) {
         url = checkoutResponse.checkoutUrl.replace(
           "https://dev.pay.payos.vn",
-          "https://next.dev.pay.payos.vn"
+          "https://dev.pay.payos.vn"
         );
       }
       if (checkoutResponse.checkoutUrl.startsWith("https://pay.payos.vn")) {
         url = checkoutResponse.checkoutUrl.replace(
           "https://pay.payos.vn",
-          "https://next.pay.payos.vn"
+          "https://pay.payos.vn"
         );
       }
       // console.log(url);

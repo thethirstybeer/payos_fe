@@ -70,7 +70,7 @@ export default function OrderTableDemo({ data }) {
                           : "Chưa thanh toán"}
                       </TableCell>
                     </TableRow>
-                    <TableRow key={"items"}>
+                    {/* <TableRow key={"items"}>
                       <TableCell align="left">Sản phẩm</TableCell>
                       <TableCell align="left">
                         <ul>
@@ -79,7 +79,7 @@ export default function OrderTableDemo({ data }) {
                           <li>{`Đơn giá: ${data["items"][0]["price"]} VNĐ`}</li>
                         </ul>
                       </TableCell>
-                    </TableRow>
+                    </TableRow> */}
                     <TableRow key={"amount"}>
                       <TableCell align="left">Tổng tiền</TableCell>
                       <TableCell align="left">{data["amount"]} VNĐ</TableCell>

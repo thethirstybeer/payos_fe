@@ -4,7 +4,7 @@ export async function createPaymentLink(formData) {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.REACT_APP_ORDER_URL}/order/create`,
+      url: `http://localhost:3030/order/create`,
       data: formData,
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export async function getListBank(){
     try {
         const res = await axios({
           method: "GET",
-          url: `${process.env.REACT_APP_LISTS_BANK_URL}`,
+          url: `https://api.vietqr.io/v2/banks`,
           headers: {
             "Content-Type": "application/json",
           },
@@ -34,7 +34,7 @@ export async function getOrder(orderId){
   try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.REACT_APP_ORDER_URL}/order/${orderId}`,
+        url: `http://localhost:3030/order/${orderId}`,
         headers: {
           "Content-Type": "application/json",
         },
@@ -48,7 +48,7 @@ export async function cancelOrder(orderId){
   try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.REACT_APP_ORDER_URL}/order/${orderId}`,
+        url: `http://localhost:3030/order/${orderId}`,
         headers: {
           "Content-Type": "application/json",
         },
